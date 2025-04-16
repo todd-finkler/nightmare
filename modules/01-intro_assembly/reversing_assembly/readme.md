@@ -95,14 +95,14 @@ We can see that it loads the value `0xa` into `ebp-0xc`:
 mov    DWORD PTR [ebp-0xc],0xa
 ```
 
-Immediately proceeding that, we see that it runs a `cmp` instruction on it to check if it is equal. If they are not equal it will jump to `main+0x2e`. Since it was just loaded with the value `0xa`, it should not make the jump:
+Immediately following that, we see that it runs a `cmp` instruction on it to check if it is equal. If they are not equal it will jump to `main+0x2e`. Since it was just loaded with the value `0xa`, it should not make the jump:
 
 ```
 cmp    DWORD PTR [ebp-0xc],0xa
 jne    8048429 <main+0x2e>
 ```
 
-proceeding that it should make a call to puts:
+following that it should make a call to puts:
 ```
 sub    esp,0xc
 push   0x80484c0
