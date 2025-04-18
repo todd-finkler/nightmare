@@ -9,7 +9,11 @@ Also one thing to note, pwntools has Python2 and Python3 versions. Atm this cour
 It's fairly simple process. The installation process is pretty much just using pip:
 
 ```
-$    sudo pip install pwn
+$ sudo apt-get update
+$ sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+$ python3 -m pip install --upgrade pip
+$ python3 -m pip install --upgrade pwntools
+
 ```
 
 If you have any problems, google will help a lot.
